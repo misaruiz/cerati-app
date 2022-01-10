@@ -18,9 +18,8 @@ export default function MyCollection() {
         url: 'https://api.discogs.com/users/misaruiz/collection/folders/0/releases',
         headers
         })
-        .then(response => {
+        .then(async response => {
             if (isLoading) {
-            // setData(response.data);
             response.data.releases.map(record =>
                 record.basic_information.artists.map(
                 artist => (
